@@ -13,7 +13,7 @@ import { CssBaseline } from '@mui/material';
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      //ブラウザのデフォルトのCSSをリセットしthemeを反映させる
+      {/*ブラウザのデフォルトのCSSをリセットしthemeを反映させる*/}
       <CssBaseline />
       <Router>
         <Routes>
