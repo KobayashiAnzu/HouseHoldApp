@@ -53,9 +53,12 @@ const activeLinkStyle:CSSProperties = {
             <Divider />
             <List>
                 {menuItems.map((item, index) => (
-                    <NavLink to={item.path} style={({isActive}) => {
+                    <NavLink key={item.text} to={item.path} style={({isActive}) => {
                         console.log("選択されたメニューは", item.text, isActive)
-                        return {color: "red"}
+                        return {
+                            ...baseLinkStyle,
+                            ...(isActive ? activeLinkStyle: {})
+                        }
                     }}>
                     <ListItem key={index} disablePadding>
                         <ListItemButton>
